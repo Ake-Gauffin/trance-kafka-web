@@ -1,0 +1,585 @@
+/* ------------------------------ */
+/* Grundläggande styling för sidan */
+/* ------------------------------ */
+
+body {
+    background-color: black; /* Sätter bakgrundsfärgen till svart */
+    color: rgb(82, 32, 92); /* Ljuslila textfärg */
+    font-family: Arial, sans-serif; /* Standardfont */
+    text-align: center; /* Centrerar all text */
+    display: flex; /* Använder flexbox för layout */
+    justify-content: center; /* Centrerar innehållet horisontellt */
+    align-items: center; /* Centrerar innehållet vertikalt */
+    height: 100vh; /* Sätter höjden till hela skärmen */
+    margin: 0; /* Tar bort standardmarginaler */
+    flex-direction: column; /* Staplar innehållet vertikalt */
+}
+
+html, body {
+    height: 100%;
+    overflow-y: auto; /* Gör att sidan alltid kan scrollas */
+}
+
+
+/* ------------------------------ */
+/* Container för allt innehåll */
+/* ------------------------------ */
+
+.container {
+    display: flex; /* Använder flexbox */
+    flex-direction: column; /* Staplar innehållet vertikalt */
+    align-items: center; /* Centrerar innehåll horisontellt */
+    justify-content: center; /* Centrerar innehåll vertikalt */
+    text-align: center; /* Centrerar texten */
+}
+
+/* ------------------------------ */
+/* Logotypen */
+/* ------------------------------ */
+
+.logo {
+    width: 300px; /* Sätter bredden till 300px */
+    height: 300px; /* Sätter höjden till 300px */
+    margin-bottom: 20px; /* Lägger till mellanrum under logotypen */
+}
+
+/* ------------------------------ */
+/* Rubriker */
+/* ------------------------------ */
+
+h1 {
+    font-size: 3rem; /* Storlek på huvudrubriker */
+    margin-bottom: 20px; /* Lägger till mellanrum under rubriker */
+}
+
+/* ------------------------------ */
+/* Navigation (länkar till About us & Contact) */
+/* ------------------------------ */
+
+.navigation {
+    margin-bottom: 20px; /* Lägger till mellanrum under navigeringen */
+}
+
+.navigation a {
+    text-decoration: none; /* Tar bort understrykning från länkar */
+    color: rgb(82, 32, 92); /* Färgsätter länkarna */
+    margin: 10px; /* Lägger till lite utrymme mellan länkarna */
+    position: relative; /* Behövs för att lägga till animationseffekter */
+}
+
+/* Styling för rubriker i navigationen */
+.navigation a h1 {
+    font-size: 2rem; /* Mindre än huvudrubriken */
+    margin: 10px; /* Lägger till mellanrum */
+    transition: color 0.3s ease, transform 0.3s ease; /* Jämn övergång vid hover */
+}
+
+/* Effekter när man hovrar över länkarna */
+.navigation a:hover h1 {
+    color: rgb(215, 117, 13); /* Ändrar färg vid hover */
+    transform: scale(1.1); /* Förstorar texten något */
+}
+
+
+/* ------------------------------ */
+/* Sociala länkar (Spotify, Instagram, etc.) */
+/* ------------------------------ */
+
+.social-links {
+    display: flex; /* Använder flexbox för att placera ikoner bredvid varandra */
+    gap: 20px; /* Lägger mellanrum mellan ikonerna */
+    justify-content: center; /* Centrerar ikonerna */
+}
+
+.social-links a {
+    display: inline-block; /* Gör att länkarna kan storleksändras */
+    margin: 5px; /* Lägger till mellanrum runt ikonerna */
+}
+
+/* Styling för ikoner */
+.social-icon {
+    width: 40px; /* Sätter storlek på ikoner */
+    height: 40px;
+    transition: transform 0.3s ease; /* Jämn övergång vid hover */
+}
+
+/* Effekter när man hovrar över sociala ikoner */
+.social-links a:hover .social-icon {
+    transform: scale(1.1); /* Gör ikonen större vid hover */
+}
+
+
+/* Sektioner */
+div[id] {
+    padding: 20px;
+    margin-top: 50px;
+    border-top: 2px solid rgb(82, 32, 92);
+}
+
+div[id] h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Stil för innehållssidor (About & Contact) */
+.content-container {
+    max-width: 00;  /* Begränsar textens bredd för bättre fokus */
+    max-height: none;
+    width: 90%;
+    margin: 50px auto; /* Centrerar innehållet */
+    padding: 20px;
+    background-color: #1a1a1a; /* Mörkare bakgrund */
+    color: #e0e0e0; /* Ljusare text */
+    font-size: 1.2rem; /* Större och mer lättläst text */
+    line-height: 1.3; /* Ökad radavstånd */
+    border-radius: q10px; /* Mjuka hörn */
+    box-shadow: 0 0 10px rgba(192, 102, 7, 0.1); /* Lätt skuggning */
+}
+
+/* Rubrikstil */
+.content-container h1 {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Länkstil */
+.content-container a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #a020f0; /* Lila */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.content-container a:hover {
+    color: #e0e0e0; /* Vit vid hover */
+}
+
+
+
+/*Övergång för about us */
+#about-page {
+    background: url('images/TranceKafka1.JPG') center fixed; 
+    background-size: contain; /* Ser till att hela bilden syns flera gånger */
+    background-repeat: repeat; /* Upprepar bilden */
+    background-color: black;
+}
+@media (max-width: 768px) {
+    #about-page{
+        background-attachment: scroll; /* Förhindrar hopp */
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+
+#contact-page {
+    background: url('images/TranceKafka4.JPG')center fixed; 
+    background-size: cover;
+    background-size: contain; /* Ser till att hela bilden syns flera gånger */
+    background-repeat: repeat; /* Upprepar bilden */
+    background-color: black;
+
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#home-page {
+    background: url('images/outside.jpg')center fixed; 
+    background-size: cover;
+    background-size: contain; /* Ser till att hela bilden syns flera gånger */
+    background-repeat: repeat; /* Upprepar bilden */
+    background-color: black;
+}
+
+@media (max-width: 768px) {
+    #home-page {
+        background-attachment: scroll; /* Förhindrar hopp */
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.logo {
+    width: 300px;
+    height: 300px;
+    position: fixed;  /* Gör så att logotypen hålls på en fast plats */
+    top: 1px;  /* 20px från toppen */
+    left: 1px;  /* 20px från högerkanten */
+    margin-bottom: 20px;
+    transition: filter 5s ease-in-out;
+    animation: fadeIn 1.5s ease-in-out;
+
+}
+
+
+.logo:hover {
+    filter: hue-rotate(90deg) saturate(400%) brightness(400%);
+}
+
+
+@media screen and (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+    }
+
+    .navigation a h1 {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .social-links {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+/* Generell stil för content-container */
+.content-container {
+    max-width: 1200px;  /* Begränsar bredden för att göra texten mer fokuserad */
+    width: 100%;
+    margin: 50px auto; /* Centrerar innehållet */
+    padding: 20px;
+    background-color: #2f193d;
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease-in-out; /* Behåller fade-in */
+    box-shadow: 0 0 10px rgba(192, 102, 7, 0.1);
+}
+
+.content-container h1 {
+    font-size: 2.5rem;  /* Större rubrik */
+    color: #e0e0e0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* För social links i kontaktsektionen */
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover .social-icon {
+    transform: scale(1.1);
+}
+
+/* Media queries för mobiler */
+@media screen and (max-width: 768px) {
+    .content-container {
+        padding: 15px;
+        font-size: 1rem;
+        width: 95%;
+    }
+
+    .content-container h1 {
+        font-size: 2rem;
+    }
+
+    .social-links {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .back-link {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+#about-page, #contact-page   {
+    background-size: cover; /* Gör så att bakgrunden täcker hela skärmen */
+    background-position: center center; /* Centrerar bilden */
+    background-attachment: fixed; /* Gör så att bilden inte rullar med innehållet */
+}
+
+/* Media query för att justera bakgrund på små skärmar (mobiler) */
+
+.band-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.band-list li {
+    font-size: 1.2rem;
+    padding: 5px 0;
+    font-weight: bold;
+    color: #eb832e;
+}
+
+/* Anpassa texten för en modern och ren look */
+.content-container p {
+    font-size: 1.1rem;
+    line-height: 1;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+}
+
+
+
+/* Jokes aside på framsidan */
+.image-container {
+    position: relative;
+    width: 100%; /* Justera storlek */
+    max-width: 500px; /* Maxstorlek */
+    margin: 2px; /* Justera vertikalt och centrera horisontellt */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.custom-image {
+    width: 40%;
+    height: auto;
+    display: block;
+    border-radius: 10px; /* Rundade hörn om du vill */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* Lägg till transition för hover-effekt */
+}
+
+.custom-image:hover {
+    transform: scale(1.1) rotate(5deg); /* Skalar upp och roterar bilden vid hover */
+    filter: brightness(1.2) contrast(1.5); /* Gör bilden ljusare och kontrasterad vid hover */
+}
+
+
+
+/* Länk till "listen-link" */
+.listen-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s all ease-in-out;
+    font-family: 'Courier New', Courier, monospace; /* Punkig font */
+    letter-spacing: 2px; /* Mer avstånd mellan bokstäver */
+    text-transform: uppercase; /* Gör texten versaler */
+    box-shadow: 0 0 30px rgba(255, 165, 0, 0.5); /* Ljus orange skugga för effekt */
+    animation: fadeIn 1.5s ease-in-out; /* Behåller fade-in */
+}
+
+.listen-link:hover {
+    background-color: #ff7f00; /* Orange färg vid hover */
+    color: #000; /* Svart text vid hover */
+    transform: scale(1.1) rotate(-5deg); /* Gör texten lite större och snedvriden vid hover */
+    box-shadow: 0 0 30px rgba(255, 165, 0, 1); /* Starkare skugga vid hover */
+}
+
+
+
+.floating-image {
+    width: 70px;  /* Ställ in storleken på bilden */
+    height: 70px;
+    position: absolute;  /* Gör så att bilden kan placeras exakt */
+    border-radius: 20px; /* Rundade hörn om du vill */
+    top: 50%;  /* Startposition från toppen */
+    left: 50%;  /* Startposition från vänster */
+    transform: translate(-50%, -50%);  /* Justera så att bilden centreras vid start */
+    animation: fadeIn 1.5s ease-in-out; /* Behåller fade-in */
+    animation: floatAround 10s ease-in-out forwards ;  /* Animationen som gör att bilden rör sig */
+} 
+
+
+@keyframes floatAround {
+    0% {
+        top: 50%;
+        left: 50%;
+    }
+    25% {
+        top: 10%;
+        left: 90%;
+    }
+    50% {
+        top: 90%;
+        left: 90%;
+    }
+    75% {
+        top: 90%;
+        left: 10%;
+    }
+    100% {
+        top: 20%;
+        left: 70%;
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+/*Promotors*/
+
+/* Promotors Page */
+
+#promotor-page {
+
+    background: url('images/SP1.png') center fixed;
+    background-size: cover;
+    background-size: contain; /* Ser till att hela bilden syns flera gånger */
+    background-repeat: repeat; /* Upprepar bilden */
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100vh;
+}
+@media (max-width: 768px) {
+    #promotor-page {
+        background-attachment: scroll; /* Förhindrar hopp */
+    }
+}
+
+
+.content-container {
+    background: rgba(0, 0, 0, 0.8);
+    max-height: none;  /* Se till att den inte har en fast maxhöjd */
+    overflow-y: visible; /* Gör att texten alltid visas */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+    width: 50%;
+    max-width: 600px;
+    animation: fadeIn 1.5s ease-in-out; /* Behåller fade-in */}
+
+h1 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    animation: fadeIn 1.5s ease-in-out; /* Behåller fade-in */
+
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-in-out; /* Behåller fade-in */
+
+}
+
+.download-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.download-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: rgb(82, 32, 92);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 2px solid rgb(82, 32, 92);
+}
+
+.download-link:hover {
+    background-color: rgb(215, 117, 13);
+    border-color: rgb(215, 117, 13);
+    transform: scale(1.05);
+}
+
+.back-link {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: rgb(215, 117, 13);
+}
+
+.image-category {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.image-category h3 {
+    font-size: 1.3rem;
+    color: rgb(250, 248, 246);
+    margin-bottom: 10px;
+}
+
